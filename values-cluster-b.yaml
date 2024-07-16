@@ -1,0 +1,4 @@
+clusterName: cluster-b
+policiesList: 
+- policy1
+- policy2
