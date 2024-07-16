@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('clone repo') {
           steps {
-              scripts {
+              script {
               sh "git clone -b main https://github.com/ajayrudresh/acm-cluster-curator.git"
                  }
 
