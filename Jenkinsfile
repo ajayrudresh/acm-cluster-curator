@@ -13,6 +13,7 @@ pipeline {
                  if [[ $CURRENT_GIT_BRANCH -eq main ]]
                  then
                    echo "Current Branch is $CURRENT_GIT_BRANCH."
+                 fi
                  '''
                }
           }
