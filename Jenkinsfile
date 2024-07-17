@@ -5,7 +5,7 @@ pipeline {
           steps {
               script {
                  sh '''
-                 set -e
+                 set +e
                  rm -rf acm-cluster-curator
                  git clone -b main https://github.com/ajayrudresh/acm-cluster-curator.git
                  cd acm-cluster-curator
@@ -17,7 +17,7 @@ pipeline {
                    echo "Check if values file is changed in the last commit"
                    MASTER_LATEST_COMMIT_FILE=$(git show HEAD  --name-only  --pretty="")
                    if [[ "$MASTER_LATEST_COMMIT_FILE" == "Jenkinsfile" ]]
-                   then
+                   then   
                      git show HEAD:$MASTER_LATEST_COMMIT_FILE > /tmp/latest_commit_file
                      git show HEAD~1:$MASTER_LATEST_COMMIT_FILE > /tmp/previous_commit_file
                      diff /tmp/latest_commit_file /tmp/previous_commit_file
