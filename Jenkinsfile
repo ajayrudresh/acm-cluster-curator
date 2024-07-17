@@ -24,7 +24,7 @@ pipeline {
                      then
                        echo "oc patch"
                      else
-                       echo "Upgrade configuration is not changed in the values file. Hence no need to prune the cluster curator"
+                       echo "Upgrade configuration is not removed in the values file. Hence no need to prune the cluster curator"
                      fi
                    else
                      echo "Values file is not changed. Hence no need to prune the cluster curator"
