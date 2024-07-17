@@ -2,6 +2,7 @@ clusterName: cluster-a
 policiesList: 
 - policy1
 - policy2
+- policy3
 upgrade:
   pre_hook: true
   post_hook: true
