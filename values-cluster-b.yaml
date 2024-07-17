@@ -2,6 +2,3 @@ clusterName: cluster-b
 policiesList: 
 - policy1
 - policy2
-upgrade:
-  pre_hook: true
-  post_hook: true
