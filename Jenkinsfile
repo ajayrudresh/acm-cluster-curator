@@ -6,7 +6,7 @@ pipeline {
               script {
                  sh '''
                  rm -rf acm-cluster-curator
-                 git clone -b test https://github.com/ajayrudresh/acm-cluster-curator.git
+                 git clone -b main https://github.com/ajayrudresh/acm-cluster-curator.git
                  cd acm-cluster-curator
                  echo "Fetching current branch name"
                  CURRENT_GIT_BRANCH=$(git branch | sed 's/* //g')
