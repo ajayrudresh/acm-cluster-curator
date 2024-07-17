@@ -14,6 +14,8 @@ pipeline {
                  then
                    echo "Current Branch is $CURRENT_GIT_BRANCH."
                    echo "Check if values file is changed in the last commit"
+                   git show HEAD  --name-only  --pretty="" 
+                   git show HEAD~1  --name-only  --pretty="" 
                    # MASTER_LATEST_COMMIT_VALUES=$(git show HEAD  --name-only  --pretty="" | grep values)
                    # MASTER_PREVIOUS_COMMIT_VALUES=$(git show HEAD~1  --name-only  --pretty="" | grep values)
                  else
