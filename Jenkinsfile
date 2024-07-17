@@ -22,6 +22,7 @@ pipeline {
                      diff /tmp/latest_commit_file /tmp/previous_commit_file
                    else
                      echo "Values file is not changed. Hence no need to Prune the Cluster Curator"
+                   fi
                  else
                    echo "Current Branch is $CURRENT_GIT_BRANCH (not a master). Hence no need to Prune the Cluster Curator"
                  fi
