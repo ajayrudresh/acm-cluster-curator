@@ -10,7 +10,7 @@ pipeline {
                  cd acm-cluster-curator
                  echo "Fetching current branch name"
                  CURRENT_GIT_BRANCH=$(git branch | sed 's/* //g')
-                 if [[ CURRENT_GIT_BRANCH == "main" ]]
+                 if [[ "$CURRENT_GIT_BRANCH" == "main" ]];
                  then
                    echo "Current Branch is $CURRENT_GIT_BRANCH."
                    echo "Check if values file is changed in the last commit"
