@@ -19,7 +19,6 @@ pipeline {
                    then   
                      git show HEAD:$MASTER_LATEST_COMMIT_FILE > /tmp/latest_commit_file
                      git show HEAD~1:$MASTER_LATEST_COMMIT_FILE > /tmp/previous_commit_file
-                     exec 2>/dev/null
                      diff /tmp/latest_commit_file /tmp/previous_commit_file | grep values || true
                    else
                      echo "Values file is not changed. Hence no need to Prune the Cluster Curator"
